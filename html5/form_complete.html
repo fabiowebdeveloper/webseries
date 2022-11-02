@@ -5,6 +5,64 @@
     <title>Form Complete</title>
 </head>
 <body>
-alteração no arquivo
+    <h1>Formulário Completo</h1>
+    <!--
+        POST - Envia os dados de forma criptogragrafada (SEGURO)
+        GET - Envia os dados pela URL (VELOZ)
+        enctype - Para envio de arquivos
+        -->
+    <form action="recebe_dados.php" method="post" enctype="multipart/form-data">
+        <h2>Informações Pessoais</h2>
+        <label>Primeiro Nome</label>
+        <input type="text" placeholder="Digite somente seu primeiro nome" name="first_name"> <br />
+
+        <label>Sobrenome</label>
+        <input type="text" placeholder="Digite o seu sobrenome" name="last_name"> <hr />
+
+        <h2>Preferências</h2>
+        <input type="checkbox" name="preferencias" value="cultura" id="cultura">
+        <label for="cultura">Cultura</label> <br>
+
+        <input type="checkbox" name="preferencias" value="esporte" id="esporte" checked>
+        <label for="esporte">Esporte</label> <br>
+
+        <input type="checkbox" name="preferencias" value="lazer" id="lazer">
+        <label for="lazer">Lazer</label> <hr>
+
+        <h2>Forma de Contratação</h2>
+        <input type="radio" name="contratacao" value="efetivo" id="formato_efetivo">
+        <label for="formato_efetivo">Efetivo (CLT)</label> <br>
+
+        <input type="radio" checked name="contratacao" value="terceirizado" id="formato_terceirizado">
+        <label for="formato_terceirizado">Terceirizado (Externo)</label> <br>
+
+        <input type="radio" name="contratacao" value="estagiario" id="formato_estagiario">
+        <label for="formato_estagiario">Estágio (Temporário)</label> <hr>
+
+        <h2>Estado Civil</h2>
+        <label for="estado_civil">Estado Civil</label> <br />
+        <select name="estado_civil" id="estado_civil">
+            <option value="solteiro(a)">Solteiro(a)</option>
+            <option selected value="casado(a)">Casado(a)</option>
+            <option value="viúvo(a)">Viúvo(a)</option>
+            <option value="divorciado(a)">Divorciado(a)</option>
+        </select>
+        <hr>
+
+        <h2>Setor para o qual você está se ofertando</h2>
+        <label for="setores">Setores</label> <br>
+        <select name="setores" id="setores" multiple size="4">
+            <optgroup>
+                <option value="administracao">Administração</option>
+                <option value="vendas">Vendas</option>
+            </optgroup>
+            <option value="gerencia">Gerência</option>
+            <option value="coordenacao">Coordenação</option>
+        </select>
+
+
+    </form>
+
+
 </body>
 </html>
